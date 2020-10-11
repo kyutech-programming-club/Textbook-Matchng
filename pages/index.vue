@@ -22,6 +22,7 @@
         >
           GitHub
         </a>
+        <n-link to="intro" class="button--grey">Introduction Page</n-link>
       </div>
     </div>
   </div>
