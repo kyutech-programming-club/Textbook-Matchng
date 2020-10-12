@@ -1,23 +1,14 @@
 <template>
-	<div>
-		<header>
-			<h1>header</h1>
-			<HeaderNav />
-		</header>
-	</div>
+  <h1>{{ title }}</h1>
 </template>
+
 <script>
-	import HeaderNav from "@/components/headerNav.vue";
-	export default {
-		components: {
-			HeaderNav
-		}
-	};
-</script>
-<style lang="scss" scoped>
-header {
-	color: #fff;
-	padding: 20px;
-	background-color: #527b8e;
+export default {
+  props: {
+    title: {
+      type: String,
+      default: ''
+    }
+  }
 }
-</style>
+</script>

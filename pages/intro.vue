@@ -1,4 +1,5 @@
 <template>
+
   <v-app>
 
     <section>
@@ -29,7 +30,9 @@
 
 <script>
 export default {
-  
+  name: 'pp',
+  layout: 'head'
 }
+
 </script>
 
