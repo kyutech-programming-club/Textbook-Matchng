@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-app>
 
     <section>
       <h2>教科書を、次の世代へ</h2>
@@ -24,7 +24,7 @@
       <a>ほげほげ</a>
     </section>
 
-  </div>
+  </v-app>
 </template>
 
 <script>
