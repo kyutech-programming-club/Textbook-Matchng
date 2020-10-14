@@ -28,11 +28,12 @@
   </v-app>
 </template>
 
+
 <script>
+
 export default {
-  name: 'pp',
+  name: 'sample',
   layout: 'head'
 }
-
 </script>
 
