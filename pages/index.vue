@@ -1,19 +1,31 @@
 <template>
-  <div>
+  <div v-if="isUserStateFetched">
     <button @click="googleLogin">ログイン</button>
   </div>
+  <div v-else>
+    <v-progress-circular
+      indeterminate = true
+    />
+  </div>
+
 </template>
 
 <script>
 import firebase from '@/plugins/firebase'
 
-export default {
+export default{
+  data() {
+    return {
+      isUserStateFetched: false,
+    }
+  },
   created: function () {
     firebase.auth().onAuthStateChanged(user => {
       console.log('Login scceeded!')
       if (user != null) {
         this.$router.push('/postlist')
       }
+      this.isUserStateFetched = true
     })
     console.log('created')
   },
