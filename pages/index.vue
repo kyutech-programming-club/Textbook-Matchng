@@ -4,7 +4,7 @@
   </div>
   <div v-else>
     <v-progress-circular
-      indeterminate = true
+      indeterminate
     />
   </div>
 
