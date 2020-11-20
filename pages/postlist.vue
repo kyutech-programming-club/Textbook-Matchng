@@ -16,18 +16,21 @@ import firebase from '@/plugins/firebase'
 export default {
   data() {
     return {
-      photo_url: ""
+      photo_url: null
     }
   },
   created: function () {
     firebase.auth().onAuthStateChanged(user => {
-      this.photo_url = user.photoURL
-      console.log(this.photo_url)
+      if (user) {
+        this.photo_url = user.photoURL
+        console.log(this.photo_url)
+      }
     })
   },
   methods: {
     logout () {
       firebase.auth().signOut()
+      this.$router.push("/")
     }
   }
 }
