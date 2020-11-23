@@ -1,13 +1,13 @@
 <template>
   <v-app>
-    <v-container fluid>
-     <v-content>
+    <v-container>
+     <v-main>
 
-     <p class="letterspacing25px">
-      <section class="title">
+     <div class="letterspacing25px">
+      <section>
       <v-row >
        <h2>教科書を次の世代へ</h2>
-        <div justify="end">
+        <div>
          <v-col>
          <n-link 
          to="login"
@@ -17,10 +17,10 @@
         </div>
        </v-row>
       </section>
-     </p>
+     </div>
 
 
-    <p class="letterspacing20px">
+    <div class="letterspacing20px">
 　　  <v-card color="#dbf6e9">
        <section>
         <v-col>
@@ -31,9 +31,9 @@
         </v-col>
        </section> 
 　　  </v-card>
-    </p>
+    </div>
 
-    <p class="letterspacing20px">
+    <div class="letterspacing20px">
      <v-card>
       <section>
        <v-col>
@@ -44,9 +44,9 @@
        </v-col>
       </section>
      </v-card>
-    </p>
+    </div>
 
-    <p class="letterspacing20px">
+    <div class="letterspacing20px">
       <v-card color="#dbf6e9">
        <section>
          <v-col>
@@ -55,11 +55,11 @@
          <v-col>
           <h3>確実で誠実な取引をしましょう</h3>
          </v-col> 
-    </section>
+       </section>
       </v-card>
-    </p>
+    </div>
 
-      </v-content>
+      </v-main>
     </v-container>
   </v-app>
 </template>
@@ -69,11 +69,3 @@ export default {
   
 }
 </script>
-
-<style>
-
-.letterspacing20px{
-  color: #35495e;
-  text-decoration: underline #35495e;
-}
-</style>
