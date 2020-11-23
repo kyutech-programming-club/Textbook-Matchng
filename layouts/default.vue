@@ -18,10 +18,4 @@ export default {
 </script>
 
 <style>
-main {
-  min-height: 600px;
-		background-color: #ddd;
-		text-align: center;
-		padding: 30px;
-}
 </style>
