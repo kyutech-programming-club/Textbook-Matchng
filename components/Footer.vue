@@ -9,11 +9,11 @@
 
 
 <style>
-.footer {
+ .footer {
   color: #35495e;
 	padding: 20px;
   background-color:#94b4a4;
   font-size: 10px;
 	font-weight: bold;
-}
+} 
 </style>
