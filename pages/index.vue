@@ -1,13 +1,29 @@
 <template>
-  <div v-if="isUserStateFetched">
-    <button @click="googleLogin">ログイン</button>
-  </div>
-  <div v-else>
-    <v-progress-circular
-      indeterminate
-    />
-  </div>
-
+  <v-app>
+    <v-content>
+      <v-container v-if="isUserStateFetched">
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <h1>Textbook-Matching</h1>
+          <v-btn
+            class="ma-4"
+            outlined
+            color="teal"
+            @click="googleLogin()"
+          >
+            Sign in with Google
+          </v-btn>
+        </v-row>
+      </v-container>
+      <v-container v-else>
+        <v-progress-circular
+          indeterminate
+        />
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
