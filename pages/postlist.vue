@@ -40,9 +40,16 @@
         </v-card>
 
         <v-card width="600px" class="mx-auto mt-5">
-          <v-card-title>タイトル3</v-card-title>
-          <V-card-subtitle>サブタイトル3</V-card-subtitle>
-          <v-card-text>本文だあひあひぃ！</v-card-text>
+          <v-container>
+            <v-card-actions>
+              <v-avatar class="d-inline-block" size="40">
+                <v-img
+                  :src="photo_url"
+                />
+              </v-avatar>
+              <v-card-title>数学の教科書3点お譲りします</v-card-title>
+            </v-card-actions>
+          </v-container>
         </v-card>
 
         <v-card width="600px" class="mx-auto mt-5">
@@ -52,9 +59,16 @@
         </v-card>
 
         <v-card width="600px" class="mx-auto mt-5">
-          <v-card-title>タイトル3</v-card-title>
-          <V-card-subtitle>サブタイトル3</V-card-subtitle>
-          <v-card-text>本文だあひあひぃ！</v-card-text>
+          <v-container>
+            <v-card-actions>
+              <v-avatar class="d-inline-block" size="40">
+                <v-img
+                  :src="photo_url"
+                />
+              </v-avatar>
+              <v-card-title>数学の教科書3点お譲りします</v-card-title>
+            </v-card-actions>
+          </v-container>
         </v-card>
 
         <v-card width="600px" class="mx-auto mt-5">
