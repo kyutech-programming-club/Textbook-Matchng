@@ -20,7 +20,7 @@
       </div>
 
       <div class="ma-4">
-        <v-card width="600px" class="mx-auto mt-5">
+        <v-card width="600px" class="mx-auto mt-5" href="https://o-xian.netlify.app/">
           <v-container>
             <v-card-actions>
               <v-avatar class="d-inline-block" size="40">
