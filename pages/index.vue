@@ -32,6 +32,7 @@
 export default {
   name: 'sample',
   layout: 'footer'
+  
 }
 </script>
 
