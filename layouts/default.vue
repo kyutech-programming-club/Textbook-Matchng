@@ -1,18 +1,21 @@
 <template>
   <div>
-    <main>
-      <Nuxt />
-    </main>
+    <app-header/>
+    <Nuxt />
     <app-footer/>
   </div>
+  
 </template>
 
 <script>
-import AppFooter from '~/components/Footer.vue'
+import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
+  name:'app',
  components: {
-   AppFooter
+   'app-header': Header,
+   'app-footer': Footer,
  }
 }
 </script>
