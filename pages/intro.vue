@@ -71,7 +71,6 @@
       </v-flex>
     </v-layout>
   </v-container>
-=======
 
 
         <div class="letterspacing20px">
@@ -86,9 +85,6 @@
           </section>
           </v-card>
         </div>
-
-      </v-main>
-    </v-container>
   </v-app>
 </template>
 
