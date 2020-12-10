@@ -1,7 +1,7 @@
 <template>
   <header>
   <v-app-bar>
-  
+
     <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
     <v-toolbar-title>Textbook-Maching</v-toolbar-title>
      
@@ -15,8 +15,8 @@
       color="green"
       size="56"
     ></v-avatar>
-
-    </v-app-bar>
+  
+  </v-app-bar>
 
 <v-navigation-drawer
         v-model="drawer"
@@ -42,7 +42,11 @@
 
 <script>
 export default {
-  
+  data(){
+    return{
+    drawer: false
+    }
+  }
 }
 </script>
 
