@@ -14,16 +14,17 @@
 </template>
 
 <script>
-export default {
-  
+export default { 
 }
 </script>
 
 
+
 <style>
-.footer {
+ .footer {
   color: #35495e;
 	padding: 20px;
+
   background-color: #657e74;
   font-size: 10px;
 	font-weight: bold;
@@ -32,6 +33,5 @@ export default {
 
 .icon{
   text-justify: end;
-
-}
+} 
 </style>

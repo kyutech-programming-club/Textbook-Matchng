@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-container>
+
       <v-layout>
         <v-flex>
           <v-main>
@@ -70,7 +71,24 @@
       </v-flex>
     </v-layout>
   </v-container>
+=======
 
+
+        <div class="letterspacing20px">
+          <v-card color="#dbf6e9">
+          <section>
+            <v-col>
+              <h1>取引は対面で</h1>
+            </v-col>
+            <v-col>
+              <h3>確実で誠実な取引をしましょう</h3>
+            </v-col> 
+          </section>
+          </v-card>
+        </div>
+
+      </v-main>
+    </v-container>
   </v-app>
 </template>
 
@@ -93,6 +111,7 @@ export default {
 }
 
 </style>
+
 
 
 

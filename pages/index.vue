@@ -1,38 +1,42 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        chare
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-        <n-link to="intro" class="button--grey">Introduction Page</n-link>
-      </div>
-    </div>
+  <div v-if="isUserStateFetched">
+    <button @click="googleLogin">ログイン</button>
   </div>
+  <div v-else>
+    <v-progress-circular
+      indeterminate
+    />
+  </div>
+
 </template>
 
 <script>
-export default {
-  name: 'sample',
-  layout: 'footer'
-  
+
+import firebase from '@/plugins/firebase'
+
+export default{
+  data() {
+    return {
+      isUserStateFetched: false,
+    }
+  },
+  created: function () {
+    firebase.auth().onAuthStateChanged(user => {
+      console.log('Login scceeded!')
+      if (user != null) {
+        this.$router.push('/postlist')
+      }
+      this.isUserStateFetched = true
+    })
+    console.log('created')
+  },
+  methods: {
+    async googleLogin () {
+      // 認証プロバイダへリダイレクト
+      const provider = new firebase.auth.GoogleAuthProvider()
+      await firebase.auth().signInWithRedirect(provider)
+    }
+  }
 }
 </script>
 
