@@ -1,7 +1,11 @@
 <template>
   <header>
     <v-app-bar>
-      <v-toolbar-title>Textbook-Maching</v-toolbar-title>
+      <nuxt-link to="/postlist">
+        <v-toolbar-title>
+            Textbook-Matcing
+        </v-toolbar-title>
+      </nuxt-link>
       <v-spacer></v-spacer>
       <v-btn
         to="login" 
