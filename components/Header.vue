@@ -3,6 +3,7 @@
     <v-app-bar>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-toolbar-title>Textbook-Maching</v-toolbar-title>
+      <v-spacer></v-spacer>
       <v-btn
         to="login" 
         class="ma-4"
