@@ -1,35 +1,59 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        chare
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
+  <v-app>
+    <v-content>
+      <v-container v-if="isUserStateFetched">
+        <v-row
+          align="center"
+          justify="center"
         >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-        <n-link to="intro" class="button--grey">Introduction Page</n-link>
-      </div>
-    </div>
-  </div>
+          <h1>Textbook-Matching</h1>
+          <v-btn
+            class="ma-4"
+            outlined
+            color="teal"
+            @click="googleLogin()"
+          >
+            Sign in with Google
+          </v-btn>
+        </v-row>
+      </v-container>
+      <v-container v-else>
+        <v-progress-circular
+          indeterminate
+        />
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-export default {}
+
+import firebase from '@/plugins/firebase'
+
+export default{
+  data() {
+    return {
+      isUserStateFetched: false,
+    }
+  },
+  created: function () {
+    firebase.auth().onAuthStateChanged(user => {
+      console.log('Login scceeded!')
+      if (user != null) {
+        this.$router.push('/postlist')
+      }
+      this.isUserStateFetched = true
+    })
+    console.log('created')
+  },
+  methods: {
+    async googleLogin () {
+      // 認証プロバイダへリダイレクト
+      const provider = new firebase.auth.GoogleAuthProvider()
+      await firebase.auth().signInWithRedirect(provider)
+    }
+  }
+}
 </script>
 
 <style>
@@ -72,3 +96,4 @@ export default {}
   padding-top: 15px;
 }
 </style>
+
